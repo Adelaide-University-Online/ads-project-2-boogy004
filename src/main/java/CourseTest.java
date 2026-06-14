@@ -1,3 +1,15 @@
+/**
+ * File: CourseTest.java
+ * Description: Contains unit tests for the Course class, verifying constructor validation, equality behaviour,
+ * hash code generation and string representation.
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

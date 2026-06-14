@@ -1,3 +1,16 @@
+/**
+ * File: StudyPlanner.java
+ * Description: Generates an optimised study plan from a CourseGraph. Uses prerequisite information and the
+ * student's maximum concurrent study load to schedule courses into study periods.
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

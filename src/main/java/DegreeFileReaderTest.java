@@ -1,3 +1,15 @@
+/**
+ * File: DegreeFileReaderTest.java
+ * Description: Contains unit tests for the DegreeFileReader class, verifying correct file parsing, graph
+ * construction and handling of valid input.
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
 import org.junit.jupiter.api.Test;
 
 import java.io.File;

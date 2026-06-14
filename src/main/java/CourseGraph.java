@@ -1,3 +1,15 @@
+/**
+ * File: CourseGraph.java
+ * Description: Represents the degree structure as a directed graph using an adjacency list. Stores courses
+ * as vertices and prerequisites relationships as directed edges.
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,3 +1,15 @@
+/**
+ * File: Course.java
+ * Description: Represents an individual course within a degree plan. Stores the course code and provides object
+ * identity through equals(), hashCode() and toString().
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
 import java.util.Objects;
 
 /**

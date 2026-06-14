@@ -1,3 +1,16 @@
+/**
+ * File: DegreeFileReader.java
+ * Description: Reads degree information from a text file and constructs a CourseGraph by creating courses and
+ * prerequisite relationships from the file data.
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

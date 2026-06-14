@@ -1,3 +1,16 @@
+/**
+ * File: CourseGraphTest.java
+ * Description: Contains unit tests for the CourseGraph class, verifying graph construction, course management,
+ * prerequisite relationships and in-degree calculations.
+ * Author: Gabrielle Booth
+ * Student ID: a3145294
+ * Email ID: gabrielle.booth@student.adelaide.edu.au
+ * AI Tool Used: Y
+ * This is my own work as defined by
+ *    the University's Academic Integrity Policy.
+ **/
+
+
 import org.junit.jupiter.api.Test;
 import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
