@@ -43,15 +43,21 @@ public class StudyPlanner {
 
         while (!availableCourses.isEmpty()) {
             List<Course> studyPeriod = new ArrayList<>();
+            List<Course> completedThisPeriod = new ArrayList<>();
 
             while (!availableCourses.isEmpty()
                     && studyPeriod.size() < maxCoursesPerPeriod) {
 
                 Course currentCourse = availableCourses.remove();
                 studyPeriod.add(currentCourse);
+                completedThisPeriod.add(currentCourse);
                 scheduledCourseCount++;
+            }
 
-                for (Course dependentCourse : graph.getAdjacentCourses(currentCourse)) {
+            studyPlan.add(studyPeriod);
+
+            for (Course completedCourse : completedThisPeriod) {
+                for (Course dependentCourse : graph.getAdjacentCourses(completedCourse)) {
                     int updatedInDegree = inDegrees.get(dependentCourse) - 1;
                     inDegrees.put(dependentCourse, updatedInDegree);
 
@@ -60,8 +66,6 @@ public class StudyPlanner {
                     }
                 }
             }
-
-            studyPlan.add(studyPeriod);
         }
 
         if (scheduledCourseCount != graph.getCourses().size()) {
