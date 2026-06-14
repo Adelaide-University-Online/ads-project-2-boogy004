@@ -135,4 +135,55 @@ class CourseGraphTest {
         assertTrue(adjacentCourses.contains(dependentOne));
         assertTrue(adjacentCourses.contains(dependentTwo));
     }
+
+    /**
+     * Tests that a coyrse with no prerequisites has an in-degree of zero.
+     */
+    @Test
+    void getInDegreesShouldReturnZeroForCourseWithoutPrerequisites() {
+        CourseGraph graph = new CourseGraph();
+        Course course = new Course("A");
+
+        graph.addCourse(course);
+
+        assertEquals(0, graph.getInDegrees().get(course));
+    }
+
+    /**
+     * Tests that a course with one prerequisite has an in-degree of one,
+     * while the prerequisite course has an in-degree of zero.
+     */
+    @Test
+    void getInDegreesShouldCountSinglePrerequisite() {
+        CourseGraph graph = new CourseGraph();
+
+        Course courseA = new Course("A");
+        Course courseB = new Course("B");
+
+        graph.addPrerequisite(courseA, courseB);
+
+        assertEquals(0, graph.getInDegrees().get(courseA));
+        assertEquals(1, graph.getInDegrees().get(courseB));
+    }
+
+    /**
+     * Tests that a course with multiple prerequisites has an in-degree equal
+     * to the number of incoming prerequisite relationships.
+     */
+    @Test
+    void getInDegreesShouldCountMultiplePrerequisites() {
+        CourseGraph graph = new CourseGraph();
+
+        Course courseA = new Course("A");
+        Course courseB = new Course("B");
+        Course courseC = new Course("C");
+
+        graph.addPrerequisite(courseA, courseC);
+        graph.addPrerequisite(courseB, courseC);
+
+        assertEquals(0, graph.getInDegrees().get(courseA));
+        assertEquals(0, graph.getInDegrees().get(courseB));
+        assertEquals(2, graph.getInDegrees().get(courseC));
+    }
+
 }
