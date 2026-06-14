@@ -75,6 +75,35 @@ public class CourseGraph {
     }
 
     /**
+     * Calculates the in-degree of every course in the graph.
+     *
+     * The in-degree of a course is the number of prerequisite
+     * relationships pointing to that course.
+     *
+     * @return a map containing each course and its in-degree
+     */
+    public Map<Course, Integer> getInDegrees() {
+        Map<Course, Integer> inDegrees = new HashMap<>();
+
+        // Initialise all courses with an in-degree of zero.
+        for (Course course : adjacencyList.keySet()) {
+            inDegrees.put(course, 0);
+        }
+
+        // Count incoming edges.
+        for (Set<Course> adjacentCourses : adjacencyList.values()) {
+            for (Course dependentCourse : adjacentCourses) {
+                inDegrees.put(
+                        dependentCourse,
+                        inDegrees.get(dependentCourse) + 1
+                );
+            }
+        }
+
+        return inDegrees;
+    }
+
+    /**
      * Returns a string representation of the graph.
      *
      * @return a string representation of the adjacency list
