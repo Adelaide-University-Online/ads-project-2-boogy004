@@ -59,4 +59,8 @@ public class Course {
     public String toString() {
         return code;
     }
+
+    public String getCode() {
+        return code;
+    }
 }
