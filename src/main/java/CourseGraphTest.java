@@ -137,7 +137,7 @@ class CourseGraphTest {
     }
 
     /**
-     * Tests that a coyrse with no prerequisites has an in-degree of zero.
+     * Tests that a course with no prerequisites has an in-degree of zero.
      */
     @Test
     void getInDegreesShouldReturnZeroForCourseWithoutPrerequisites() {
